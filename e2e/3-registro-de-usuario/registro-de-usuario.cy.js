@@ -21,7 +21,9 @@ describe('Cenário Registro de Usuários', () => {
    
   
       it('Validar Registro de Usuário com dados válidos', () => {
-        cy.visit('https://parabank.parasoft.com/parabank')
+        cy.visit('https://parabank.parasoft.com/parabank/register.htm')
+        cy.get('input[name="customer.firstName"]').type('Bergson')
+        cy.get('input[name="customer.lastName"]').type('Miau')
       })
   
      

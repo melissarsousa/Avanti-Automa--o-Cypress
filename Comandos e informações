@@ -1,0 +1,12 @@
+Cypress 
+
+terminal -
+	npm install cypress
+	npx cypress open
+
+Spec -> testes
+
+Comandos cypress -
+	cy.visit('') => ir para a url
+	cy.get('') => #id
+			.class
