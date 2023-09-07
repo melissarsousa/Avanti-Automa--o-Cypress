@@ -1,0 +1,22 @@
+Cypress 
+
+Documentação: https://docs.cypress.io/guides/overview/why-cypress
+			  https://docs.cypress.io/api/table-of-contents
+
+terminal -
+	npm install cypress
+	npx cypress open (rodar dentro da pasta AvantiCypress)
+
+Spec -> testes
+
+Comandos cypress -
+	cy.visit('') => ir para a url
+	cy.get('') => #id
+			.class
+			('tag[atributo="atributeName"]')
+	cy.contains => contém / validação
+	cy.should => asserções / validação
+	seletor do cypress => data-cy
+
+	it.only => roda somente esse teste
+	it.skip => skip o teste

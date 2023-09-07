@@ -1,29 +1,28 @@
 /// <reference types="cypress" />
 
-// Welcome to Cypress!
-//
-// This spec file contains a variety of sample tests
-// for a todo list app that are designed to demonstrate
-// the power of writing tests in Cypress.
-//
-// To learn more about how Cypress works and
-// what makes it such an awesome testing tool,
-// please read our getting started guide:
-// https://on.cypress.io/introduction-to-cypress
+import { generateFirstName } from "../../utils/generate-first-name";
 
 describe('Cenário Registro de Usuários', () => {
     beforeEach(() => {
-      // Cypress starts out with a blank slate for each test
-      // so we must tell it to visit our website with the `cy.visit()` command.
-      // Since we want to visit the same URL at the start of all our tests,
-      // we include it in our beforeEach function so that it runs before each test
+      cy.visit('https://parabank.parasoft.com/parabank/register.htm');
     })
    
   
       it('Validar Registro de Usuário com dados válidos', () => {
-        cy.visit('https://parabank.parasoft.com/parabank/register.htm')
-        cy.get('input[name="customer.firstName"]').type('Bergson')
-        cy.get('input[name="customer.lastName"]').type('Miau')
+        cy.get('input[id="customer.firstName"]').type('Bergson');
+        cy.get('input[id="customer.lastName"]').type('Miau');
+        cy.get('input[id="customer.address.street"]').type('Casa do Bso');
+        cy.get('input[id="customer.address.city"]').type('Fortal');
+        cy.get('input[id="customer.address.state"]').type('CE');
+        cy.get('input[id="customer.address.zipCode"]').type('111111');
+        cy.get('input[id="customer.phoneNumber"]').type('22222222');
+        cy.get('input[id="customer.ssn"]').type('1111112222');
+        cy.get('input[id="customer.username"]').type('bsinho21');
+        cy.get('input[id="customer.password"]').type('bsobso21');
+        cy.get('input[id="repeatedPassword"]').type('bsobso21');
+
+        cy.get('input[class="button"]').contains('Register').click();
+        cy.get('#rightPanel').contains('Your account was created successfully. You are now logged in.')
       })
   
      
