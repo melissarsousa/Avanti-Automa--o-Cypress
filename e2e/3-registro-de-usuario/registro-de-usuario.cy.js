@@ -17,7 +17,7 @@ describe('Cenário Registro de Usuários', () => {
         cy.get('input[id="customer.address.zipCode"]').type('111111');
         cy.get('input[id="customer.phoneNumber"]').type('22222222');
         cy.get('input[id="customer.ssn"]').type('1111112222');
-        cy.get('input[id="customer.username"]').type('bsinho21');
+        cy.get('input[id="customer.username"]').type(generateFirstName());
         cy.get('input[id="customer.password"]').type('bsobso21');
         cy.get('input[id="repeatedPassword"]').type('bsobso21');
 
