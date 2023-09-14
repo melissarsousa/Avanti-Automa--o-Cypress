@@ -20,3 +20,6 @@ Comandos cypress -
 
 	it.only => roda somente esse teste
 	it.skip => skip o teste
+
+	*arquivo commands.js => comandos personalizados
+		não precisa de import, mas se for criado outro arquivo, precisa ser importado
